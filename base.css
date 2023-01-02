@@ -1,0 +1,145 @@
+@font-face {
+  font-family: "Monsterrat-bold";
+  src: url("Montserrat-VariableFont_wght.ttf");
+  font-weight: 800;
+}
+
+@font-face {
+  font-family: "Monsterrat-light";
+  src: url("Montserrat-VariableFont_wght.ttf");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Monsterrat-extra-light";
+  src: url("Montserrat-VariableFont_wght.ttf");
+  font-weight: 300;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  background: var(--color-1);
+  background-size: cover;
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+
+.container {
+  width: 100%;
+  height: 145em;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+body::-webkit-scrollbar {
+  width: 4px;
+}
+body::-webkit-scrollbar-track {
+  background-color: #1e1e24;
+}
+body::-webkit-scrollbar-thumb {
+  background-color: #6649b8;
+}
+
+.warning {
+  position: fixed;
+  height: var(--header-height);
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  bottom: 0px;
+  font-family: Monsterrat-light, "Gill Sans", "Gill Sans MT", Calibri,
+    "Trebuchet MS", sans-serif;
+  font-weight: 600;
+  color: #fff;
+  background-color: var(--color-2);
+  z-index: 1;
+}
+
+.header {
+  z-index: 2;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: var(--header-height);
+  display: flex;
+  justify-content: center;
+  position: fixed;
+}
+
+.content {
+  margin: 0px var(--x-margin);
+  margin-top: var(--top-margin);
+  margin-bottom: 0px;
+  height: 400px;
+  width: 1100px;
+  position: relative;
+  display: grid;
+}
+
+.article-1 {
+  margin-top: calc(var(--top-margin-home) - var(--header-height));
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  grid-template-areas:
+    "t1 svg"
+    "t2 svg"
+    "t3 svg"
+    "t3 svg";
+}
+.article-2 {
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  grid-template-areas:
+    "svg t1"
+    "svg t2"
+    "svg t3"
+    "svg t3";
+}
+.article-3 {
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(4, 1fr);
+  grid-template-areas:
+    "top-text"
+    "svg-s"
+    "t3"
+    "t3";
+}
+
+.article-4 {
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: 1fr;
+  grid-template-areas: "text form form svg svg svg";
+}
+
+.content > * {
+  position: absolute;
+}
+
+.text {
+  margin: 0;
+  color: #fff;
+  font-family: Monsterrat-bold, "Gill Sans", "Gill Sans MT", Calibri,
+    "Trebuchet MS", sans-serif;
+}
+
+:root {
+  font-size: 16px;
+  --color-1: #221044;
+  --color-2: #290099;
+  --color-3: #66ffff;
+  --color-4: #6bf4ea;
+  --x-margin: 200px;
+  --top-margin: 150px;
+  --top-margin-home: 200px;
+  --header-height: 3em;
+}

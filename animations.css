@@ -1,0 +1,350 @@
+:root {
+  --delay-fast: 100ms;
+  --delay: 250ms;
+  --delay-2: 200ms;
+}
+
+.hidden {
+  opacity: 0;
+  transition: opacity 1000ms cubic-bezier(0.54, 0.02, 0.78, 0.18);
+}
+.show {
+  opacity: 1;
+  transition: opacity 1000ms cubic-bezier(0, 0.37, 0.56, 0.96);
+}
+
+.hidden-slide-right {
+  opacity: 0;
+  filter: blur(1px);
+  transform: translateX(70px);
+  transition: all cubic-bezier(0.01, 0.47, 0.58, 1) 400ms;
+  -o-transition: all cubic-bezier(0.01, 0.47, 0.58, 1) 400ms;
+  -moz-transition: all cubic-bezier(0.01, 0.47, 0.58, 1) 400ms;
+  -webkit-transition: all cubic-bezier(0.01, 0.47, 0.58, 1) 400ms;
+}
+
+.enter-slide-right {
+  opacity: 1;
+  filter: blur(0px);
+  transform: translateX(0px);
+  transition: all 550ms;
+  -o-transition: all ease-out 550ms;
+  -moz-transition: all ease-out 550ms;
+  -webkit-transition: all ease-out 550ms;
+}
+
+.hidden-slide-left {
+  opacity: 0;
+  transform: translateX(-60px);
+  transition: transform ease-out 100ms;
+  -moz-transition: transform ease-out 100ms;
+  -o-transition: transform ease-out 100ms;
+  -webkit-transition: transform ease-out 100ms;
+}
+
+.enter-slide-left {
+  opacity: 1;
+  transform: translateX(0px);
+  transition: all ease-out 550ms;
+  -moz-transition: all ease-out 550ms;
+  -o-transition: all ease-out 550ms;
+  -webkit-transition: all ease-out 550ms;
+}
+
+/**-----------------------*/
+/**  <<  Animations  >>  */
+/**---------------------*/
+
+.hidden-slide-left:nth-child(2) {
+  transition-delay: var(--delay-2);
+  -o-transition-delay: var(--delay-2);
+  -moz-transition-delay: var(--delay-2);
+  -webkit-transition-delay: var(--delay-2);
+}
+.hidden-slide-left:nth-child(3) {
+  transition-delay: calc(2 * var(--delay-2));
+  -moz-transition-delay: calc(2 * var(--delay-2));
+  -o-transition-delay: calc(2 * var(--delay-2));
+  -webkit-transition-delay: calc(2 * var(--delay-2));
+}
+
+.curve-1 {
+  animation: slide-down 550ms ease 1;
+  -moz-animation: slide-down 550ms ease 1;
+  -o-animation: slide-down 550ms ease 1;
+  -webkit-animation: slide-down 550ms ease 1;
+}
+
+.hidden-slide-right:nth-child(2) {
+  transition-delay: calc(0.7 * var(--delay-2));
+  -moz-transition-delay: calc(0.7 * var(--delay-2));
+  -o-transition-delay: calc(0.7 * var(--delay-2));
+  -webkit-transition-delay: calc(0.7 * var(--delay-2));
+}
+.hidden-slide-right:nth-child(3) {
+  transition-delay: calc(1.4 * var(--delay-2));
+  -moz-transition-delay: calc(1.4 * var(--delay-2));
+  -o-transition-delay: calc(1.4 * var(--delay-2));
+  -webkit-transition-delay: calc(1.4 * var(--delay-2));
+}
+
+.slide-down-opacity {
+  animation: slide-down-opacity 3s cubic-bezier(0, 0.59, 0.58, 1) infinite;
+  -moz-animation: slide-down-opacity 3s cubic-bezier(0, 0.59, 0.58, 1) infinite;
+  -o-animation: slide-down-opacity 3s cubic-bezier(0, 0.59, 0.58, 1) infinite;
+  -webkit-animation: slide-down-opacity 3s cubic-bezier(0, 0.59, 0.58, 1)
+    infinite;
+}
+
+.slide-right {
+  animation: slide-right cubic-bezier(0.73, 0.01, 0.26, 0.99) 3000ms infinite
+    alternate;
+  -moz-animation: slide-right cubic-bezier(0.73, 0.01, 0.26, 0.99) 3000ms
+    infinite alternate;
+  -o-animation: slide-right cubic-bezier(0.73, 0.01, 0.26, 0.99) 3000ms infinite
+    alternate;
+  -webkit-animation: slide-right cubic-bezier(0.73, 0.01, 0.26, 0.99) 3000ms
+    infinite alternate;
+}
+
+.e1 {
+  animation-delay: calc(1 * var(--delay));
+  -moz-animation-delay: calc(1 * var(--delay));
+  -o-animation-delay: calc(1 * var(--delay));
+  -webkit-animation-delay: calc(1 * var(--delay));
+}
+.e2 {
+  animation-delay: calc(2 * var(--delay));
+  -moz-animation-delay: calc(2 * var(--delay));
+  -o-animation-delay: calc(2 * var(--delay));
+  -webkit-animation-delay: calc(2 * var(--delay));
+}
+.e3 {
+  animation-delay: calc(3 * var(--delay));
+  -moz-animation-delay: calc(3 * var(--delay));
+  -o-animation-delay: calc(3 * var(--delay));
+  -webkit-animation-delay: calc(3 * var(--delay));
+}
+.e4 {
+  animation-delay: calc(4 * var(--delay));
+  -moz-animation-delay: calc(4 * var(--delay));
+  -o-animation-delay: calc(4 * var(--delay));
+  -webkit-animation-delay: calc(4 * var(--delay));
+}
+/*todo  << have to find a better way to apply animationdelay  >> */
+
+.last-1 {
+  transition-delay: var(--delay);
+  -moz-transition-delay: var(--delay);
+  -o-transition-delay: var(--delay);
+  -webkit-transition-delay: var(--delay);
+}
+
+.last-2 {
+  transition-delay: calc(2 * var(--delay));
+  -moz-transition-delay: calc(2 * var(--delay));
+  -o-transition-delay: calc(2 * var(--delay));
+  -webkit-transition-delay: calc(2 * var(--delay));
+}
+
+.last-3 {
+  transition-delay: calc(3 * var(--delay));
+  -moz-transition-delay: calc(3 * var(--delay));
+  -o-transition-delay: calc(3 * var(--delay));
+  -webkit-transition-delay: calc(3 * var(--delay));
+}
+
+.shake {
+  animation: shake-s 5s linear infinite reverse;
+  -moz-animation: shake-s 5s linear infinite reverse;
+  -o-animation: shake-s 5s linear infinite reverse;
+  -webkit-animation: shake-s 5s linear infinite reverse;
+}
+
+@keyframes slide-down {
+  from {
+    transform: translateY(-60px);
+  }
+  to {
+    transform: translateY(0px);
+  }
+}
+
+@-moz-keyframes slide-down {
+  from {
+    transform: translateY(-60px);
+  }
+  to {
+    transform: translateY(0px);
+  }
+}
+
+@-o-keyframes slide-down {
+  from {
+    transform: translateY(-60px);
+  }
+  to {
+    transform: translateY(0px);
+  }
+}
+
+@-webkit-keyframes slide-down {
+  from {
+    transform: translateY(-60px);
+  }
+  to {
+    transform: translateY(0px);
+  }
+}
+
+@keyframes slide-down-opacity {
+  0% {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  30% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+  70% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+}
+
+@-moz-keyframes slide-down-opacity {
+  0% {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  30% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+  70% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+}
+
+@-o-keyframes slide-down-opacity {
+  0% {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  30% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+  70% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+}
+
+@-webkit-keyframes slide-down-opacity {
+  0% {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  30% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+  70% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes shake-s {
+  0% {
+    transform: translateX(0px) translateY(0px);
+  }
+  33.33% {
+    transform: translateX(40px) translateY(35px);
+  }
+  66.66% {
+    transform: translateX(60px) translateY(-20px);
+  }
+  100% {
+    transform: translateX(0px) translateY(0px);
+  }
+}
+
+@-moz-keyframes shake-s {
+  0% {
+    transform: translateX(0px) translateY(0px);
+  }
+  33.33% {
+    transform: translateX(40px) translateY(35px);
+  }
+  66.66% {
+    transform: translateX(60px) translateY(-20px);
+  }
+  100% {
+    transform: translateX(0px) translateY(0px);
+  }
+}
+
+@-o-keyframes shake-s {
+  0% {
+    transform: translateX(0px) translateY(0px);
+  }
+  33.33% {
+    transform: translateX(40px) translateY(35px);
+  }
+  66.66% {
+    transform: translateX(60px) translateY(-20px);
+  }
+  100% {
+    transform: translateX(0px) translateY(0px);
+  }
+}
+
+@-webkit-keyframes shake-s {
+  0% {
+    transform: translateX(0px) translateY(0px);
+  }
+  33.33% {
+    transform: translateX(40px) translateY(35px);
+  }
+  66.66% {
+    transform: translateX(60px) translateY(-20px);
+  }
+  100% {
+    transform: translateX(0px) translateY(0px);
+  }
+}
+
+/* head animation */
+
+.head {
+  animation: up-down 2s ease-in-out infinite alternate;
+  animation-delay: 300ms;
+}
+
+@keyframes up-down {
+  from {
+    transform: translateY(0px);
+  }
+  to {
+    transform: translateY(-7px);
+  }
+}
